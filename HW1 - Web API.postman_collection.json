@@ -1,0 +1,53 @@
+{
+	"id": "1147bb8f-db5e-40b0-f0b9-2ec0806c0f39",
+	"name": "HW1 - Web API",
+	"description": "Homework 1 for Web API. ",
+	"order": [
+		"f0f0d1a6-5f39-458d-2906-dc335e5c6459",
+		"c815e904-9a0f-1a91-39fb-32ca4ee27d6b"
+	],
+	"folders": [],
+	"timestamp": 1484705230651,
+	"owner": "1391353",
+	"public": false,
+	"requests": [
+		{
+			"id": "c815e904-9a0f-1a91-39fb-32ca4ee27d6b",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes/{{id}}",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "1147bb8f-db5e-40b0-f0b9-2ec0806c0f39",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://www.googleapis.com/books/v1/volumes/{{id}}",
+			"description": "Using the chain request from the previous GET /books/v1/volumes?q={{book_title}}.",
+			"descriptionFormat": "html",
+			"time": 1484874143745,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "f0f0d1a6-5f39-458d-2906-dc335e5c6459",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes?q={{book_title}} ",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "var json = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"id\", json.items[2].id);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1484878633736,
+			"name": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+			"description": "Request for Google API book title \"Turing\"",
+			"collectionId": "1147bb8f-db5e-40b0-f0b9-2ec0806c0f39",
+			"responses": []
+		}
+	]
+}
